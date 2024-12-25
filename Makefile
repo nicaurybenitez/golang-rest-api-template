@@ -1,9 +1,22 @@
 setup:
 	go get -u github.com/swaggo/swag/cmd/swag
 	go install github.com/swaggo/swag/cmd/swag@latest
+	go get -u github.com/golang-migrate/migrate/v4/cmd/migrate
+	go install -tags 'postgres' github.com/golang-migrate/migrate/v4/cmd/migrate@latest
 	swag init -g ./cmd/server/main.go -o ./docs
 	go get -u github.com/swaggo/gin-swagger
 	go get -u github.com/swaggo/files
+migrate-up:
+	migrate -path pkg/database/migrations -database "postgresql://docker:password@localhost:5435/go_app_dev?sslmode=disable" up
+
+migrate-down:
+	migrate -path pkg/database/migrations -database "postgresql://docker:password@localhost:5435/go_app_dev?sslmode=disable" down
+
+migrate-create:
+	@read -p "Enter migration name: " name; \
+	migrate create -ext sql -dir pkg/database/migrations -seq $$name
+
+
 
 build-docker:
 	docker compose build --no-cache
@@ -38,10 +51,10 @@ test:
 	go test -v ./... -race -cover
 
 clean:
-	docker stop go-rest-api-template
+	docker stop ezzygo
 	docker stop dockerPostgres
-	docker rm go-rest-api-template
+	docker rm ezzygo
 	docker rm dockerPostgres
 	docker rm dockerRedis
-	docker image rm golang-rest-api-template-backend
+	docker image rm ezzygo-backend
 	rm -rf .dbdata
