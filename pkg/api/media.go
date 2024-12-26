@@ -6,7 +6,7 @@ import (
     "io"
     "path/filepath"
     "gorm.io/gorm"
-    "your-project/pkg/storage"
+    "ezzygo/pkg/storage"
 )
 
 type MediaService struct {

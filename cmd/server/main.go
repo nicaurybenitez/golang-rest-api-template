@@ -2,9 +2,9 @@ package main
 
 import (
 	"context"
-	"golang-rest-api-template/pkg/api"
-	"golang-rest-api-template/pkg/cache"
-	"golang-rest-api-template/pkg/database"
+	"ezzygo/pkg/api"
+	"ezzygo/pkg/cache"
+	"ezzygo/pkg/database"
 	"log"
 
 	"go.uber.org/zap"

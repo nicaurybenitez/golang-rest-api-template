@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"golang-rest-api-template/pkg/auth"
+	"ezzygo/pkg/auth"
 )
 
 func main() {

@@ -6,7 +6,7 @@ import (
 	"os"
 	"time"
 
-	"golang-rest-api-template/pkg/models"
+	"ezzygo/pkg/models"
 
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"

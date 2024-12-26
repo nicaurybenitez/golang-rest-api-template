@@ -3,9 +3,9 @@ package api
 import (
 	"context"
 	"encoding/json"
-	"golang-rest-api-template/pkg/cache"
-	"golang-rest-api-template/pkg/database"
-	"golang-rest-api-template/pkg/models"
+	"ezzygo/pkg/cache"
+	"ezzygo/pkg/database"
+	"ezzygo/pkg/models"
 	"net/http"
 	"strconv"
 	"time"

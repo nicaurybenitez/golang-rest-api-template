@@ -1,15 +1,15 @@
 # Proyecto CMS Go
 
 ## Estructura Base
-Basado en: https://github.com/araujo88/golang-rest-api-template
+Basado en: https://github.com/araujo88/ezzygo
 
 ## Pasos de Implementación
 
 ### 1. Setup Inicial
 ```bash
 # Clonar base
-git clone https://github.com/araujo88/golang-rest-api-template
-cd golang-rest-api-template
+git clone https://github.com/araujo88/ezzygo
+cd ezzygo
 
 # Crear nueva estructura CMS
 mkdir -p pkg/{cms,storage,frontend}

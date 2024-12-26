@@ -1,7 +1,7 @@
 package middleware
 
 import (
-	"golang-rest-api-template/pkg/auth"
+	"ezzygo/pkg/auth"
 	"net/http"
 	"strings"
 

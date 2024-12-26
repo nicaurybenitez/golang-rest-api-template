@@ -3,9 +3,9 @@ package api
 
 import (
     "context"
-    "golang-rest-api-template/pkg/cache"
-    "golang-rest-api-template/pkg/database"
-    "golang-rest-api-template/pkg/storage"
+    "ezzygo/pkg/cache"
+    "ezzygo/pkg/database"
+    "ezzygo/pkg/storage"
     "github.com/stretchr/testify/mock"
     "go.mongodb.org/mongo-driver/mongo"
     "go.uber.org/zap"

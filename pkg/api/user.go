@@ -4,9 +4,9 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"golang-rest-api-template/pkg/auth"
-	"golang-rest-api-template/pkg/database"
-	"golang-rest-api-template/pkg/models"
+	"ezzygo/pkg/auth"
+	"ezzygo/pkg/database"
+	"ezzygo/pkg/models"
 	"net/http"
 
 	"gorm.io/gorm"
